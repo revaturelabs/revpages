@@ -39,11 +39,25 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<!-- nice to have 		
+				<!-- nice to have 		
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-config</artifactId>
 		</dependency> -->
+		<!-- 
+        Hibernate Dependencies need to be overriden in order to work with OJDBC within your local repo. 
+        -->
+		<dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>5.2.2.Final</version><!--$NO-MVN-MAN-VER$-->
+        </dependency>
+        
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>5.2.2.Final</version><!--$NO-MVN-MAN-VER$-->
+        </dependency>
 	</dependencies>
 
 	<dependencyManagement>
