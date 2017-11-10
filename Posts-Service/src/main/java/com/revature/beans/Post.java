@@ -22,7 +22,7 @@ public class Post {
 	@Column
 	@SequenceGenerator(allocationSize=1, name="postseq", sequenceName="postseqgen")
 	@GeneratedValue(generator="postseq", strategy=GenerationType.SEQUENCE)
-	private Integer post_id;
+	private Long post_id;
 	@Column
 	private Clob post_content;
 	@Column
@@ -32,10 +32,10 @@ public class Post {
 	private List<Post> child_post_id;
 	
 	
-	public int getPost_id() {
+	public Long getPost_id() {
 		return post_id;
 	}
-	public void setPost_id(int post_id) {
+	public void setPost_id(Long post_id) {
 		this.post_id = post_id;
 	}
 	public Clob getPost_content() {
@@ -50,7 +50,7 @@ public class Post {
 	public void setUser_id(int user_id) {
 		this.user_id = user_id;
 	}
-	public Post(int post_id, Clob post_content, int user_id, int parent_post_id) {
+	public Post(Long post_id, Clob post_content, int user_id) {
 		super();
 		this.post_id = post_id;
 		this.post_content = post_content;

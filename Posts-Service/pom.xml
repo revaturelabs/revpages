@@ -6,8 +6,8 @@
 	<version>0.0.1-SNAPSHOT</version>
 
 
-	<name>product</name>
-	<description>Microservice for products</description>
+	<name>post</name>
+	<description>Microservice for post</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
