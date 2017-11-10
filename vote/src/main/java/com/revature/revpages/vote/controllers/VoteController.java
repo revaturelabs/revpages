@@ -8,7 +8,6 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -24,11 +23,6 @@ public class VoteController {
 	public void setVoteService(VoteService voteService) {
 		this.voteService = voteService;
 	}
-	
-/*	@PutMapping(path="/upvote/", consumes=MediaType.APPLICATION_JSON_VALUE, produces=MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<Void> upvote(Long postId, Integer userId){
-		
-	}*/
 
 	@PostMapping(path="/new", consumes=MediaType.APPLICATION_JSON_VALUE, produces=MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Vote> save(@RequestBody Vote vote){
