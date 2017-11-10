@@ -9,5 +9,5 @@ import com.revature.model.Profile;
 @Repository("profileRepository")
 @Transactional
 public interface ProfileRepository extends JpaRepository<Profile, Long> {
-	
+	public Profile getByUserId(int userId);
 }

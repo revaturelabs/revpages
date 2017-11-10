@@ -16,4 +16,9 @@ public class ProfileServiceAlpha implements ProfileService {
 	public void updateProfile(Profile profile) {
 		profileRepository.save(profile);
 	}
+
+	@Override
+	public Profile getUserProfile(Profile profile) {
+		return profileRepository.getByUserId(profile.getUserId());
+	}
 }
