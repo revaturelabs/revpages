@@ -5,8 +5,8 @@
 	<artifactId>user</artifactId>
 	<version>1.0</version>
 
-	<name>user</name>
-	<description>User Microservice using Spring Boot</description>
+	<name>profile</name>
+	<description>Profile Microservice using Spring Boot</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

@@ -14,8 +14,9 @@ public class UserServiceAlpha implements UserService {
 	@Autowired
 	private UserRepository userRepository;
 	
-	public void registerUser(User user) {
+	public User registerUser(User user) {
 		userRepository.save(user);
+		return userRepository.findByEmail(user.getEmail()).get(0);
 	}
 	
 	public List<User> getAllUsers() {
