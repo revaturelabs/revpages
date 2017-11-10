@@ -21,4 +21,10 @@ public class ProfileController {
 		profileService.updateProfile(profile);
 		return new ResponseEntity<Profile>(HttpStatus.OK);
 	}
+	
+	@PostMapping("/getProfile")
+	public ResponseEntity<Profile> getProfile(@RequestBody Profile profile) {
+		profileService.getUserProfile(profile);
+		return new ResponseEntity<Profile>(profile, HttpStatus.OK);
+	}
 }

@@ -14,7 +14,7 @@ import javax.persistence.Table;
  * @author Peter
  */
 @Entity
-@Table(name="USER_T")
+@Table(name="PROFILE")
 public class Profile {
 	
 	@Id
@@ -63,4 +63,84 @@ public class Profile {
 		this.skills = skills;
 		this.picture = picture;
 	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public int getUserId() {
+		return userId;
+	}
+
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getLocation() {
+		return location;
+	}
+
+	public void setLocation(String location) {
+		this.location = location;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getCertifications() {
+		return certifications;
+	}
+
+	public void setCertifications(String certifications) {
+		this.certifications = certifications;
+	}
+
+	public String getSkills() {
+		return skills;
+	}
+
+	public void setSkills(String skills) {
+		this.skills = skills;
+	}
+
+	public Blob getPicture() {
+		return picture;
+	}
+
+	public void setPicture(Blob picture) {
+		this.picture = picture;
+	}
+
+	@Override
+	public String toString() {
+		return "Profile [id=" + id + ", userId=" + userId + ", firstName=" + firstName + ", lastName=" + lastName
+				+ ", location=" + location + ", title=" + title + ", certifications=" + certifications + ", skills="
+				+ skills + ", picture=" + picture + "]";
+	}
+
 }
