@@ -12,6 +12,7 @@ import org.springframework.web.filter.CorsFilter;
 /**
  * Netflix Zuul - API Gateway
  * 
+ * @author pjw6193
  */
 @SpringBootApplication
 @EnableDiscoveryClient

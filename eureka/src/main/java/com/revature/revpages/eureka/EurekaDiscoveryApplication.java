@@ -6,6 +6,8 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 /**
  * Netflix Eureka - Discovery
+ * 
+ * @author pjw6193
  */
 @SpringBootApplication
 @EnableEurekaServer
