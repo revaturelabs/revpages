@@ -1,7 +1,5 @@
 package com.revature.service;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,10 +14,20 @@ public class UserServiceAlpha implements UserService {
 	
 	public User registerUser(User user) {
 		userRepository.save(user);
-		return userRepository.findByEmail(user.getEmail()).get(0);
+		return userRepository.findByEmail(user.getEmail());
 	}
 	
-	public List<User> getAllUsers() {
-		return userRepository.findAll();
+	public User login(User user) {
+		User storedUser = userRepository.findByEmail(user.getEmail());
+		
+		if(storedUser != null) {
+			if(storedUser.getEmail().equals(user.getEmail()) &&
+					storedUser.getPassword().equals(user.getPassword())) {
+				return storedUser;
+			}
+		}
+		
+		//The user entered a non existing email.
+		return new User();
 	}
 }
